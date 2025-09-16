@@ -15,10 +15,10 @@ all: test
 test: $(TARGETS)
 
 test_adc_to_delay: $(TEST_DIR)/test_adc_to_delay.cpp $(SRC_FILES)
-	$(CXX) $(CXXFLAGS) -I$(INC_DIR) $(TEST_DIR)/test_adc_to_delay.cpp $(SRC_FILES) -o test_adc_to_delay
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -DTEST_SUITE $(TEST_DIR)/test_adc_to_delay.cpp $(SRC_FILES) -o test_adc_to_delay
 
 test_timer: $(TEST_DIR)/test_timer.cpp $(SRC_FILES)
-	$(CXX) $(CXXFLAGS) -I$(INC_DIR) $(TEST_DIR)/test_timer.cpp $(SRC_FILES) -o test_timer
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -DTEST_SUITE $(TEST_DIR)/test_timer.cpp $(SRC_FILES) -o test_timer
 
 clean:
 	rm -f $(TARGETS) adc_to_delay_results.csv

@@ -3,6 +3,9 @@
 #include <fstream>
 #include <iostream>
 
+/*
+    \brief Run the conversion from ADC value to delay in ticks, write to CSV for comparison
+*/
 int main() {
 
     std::ofstream csv_file("adc_to_delay_results.csv");

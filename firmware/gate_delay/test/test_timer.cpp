@@ -10,7 +10,9 @@ void timer_overflow_handler()
     timer_hi_byte += 1;
 }
 
-
+/*
+    \brief A simple test bench to confirm overflow handling
+*/
 int main() 
 {
 
