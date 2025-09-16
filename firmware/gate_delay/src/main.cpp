@@ -11,8 +11,6 @@
 #define OUTPUT_PIN  PB0
 #define ANALOG_CH   1 // ADC1
 
-#define DBG_LED_PIN PB1
-
 // Timing variables, related to current pin state
 volatile uint16_t input_pulse_start = 0;
 volatile uint16_t pulse_width = 0;
@@ -41,6 +39,8 @@ Pulse pulse_fifo[PULSE_FIFO_DEPTH];
 uint8_t pulse_head;
 uint8_t pulse_tail;
 
+#ifdef EN_DEBUG_PIN
+#define DBG_LED_PIN PB1
 inline void delay_x10ms(uint8_t const x) 
 {
     for (uint8_t n = 0; n < x; ++n) {
@@ -64,6 +64,7 @@ void debug_blink(uint8_t const nblink, bool const forever=true)
 
     sei();
 }
+#endif
 
 uint16_t read_adc(uint8_t const ch) 
 {
@@ -83,9 +84,6 @@ void setup()
     DDRB |= (1 << OUTPUT_PIN);
     DDRB &= ~(1 << INPUT_PIN);
     PORTB |= (1 << INPUT_PIN); // Pull-up default enabled (MCUCR.PUD=0)
-
-    // Set DBG_LED_PIN as output
-    DDRB |= (1 << DBG_LED_PIN);
     
     // Set up ADC: Vcc ref, select ADC1, left adjust, prescaler 64
     ADMUX = (1 << MUX0); // ADC1
@@ -107,7 +105,11 @@ void setup()
         pulse_fifo[i].state = 0;
     }
 
+#ifdef EN_DEBUG_PIN
+    // Set DBG_LED_PIN as output
+    DDRB |= (1 << DBG_LED_PIN);
     debug_blink(3,false);
+#endif
 
     // Set up Timer0: normal mode, prescaler 8
     TCCR0B = (1 << CS01);   // 0b010 clk/8, start
@@ -154,13 +156,13 @@ ISR(TIM0_OVF_vect)
     ticks_pending +=1 ;
 }
 
-uint8_t tc_overflow = 0;
-
 void loop() 
 {
+#ifdef EN_DEBUG_PIN
     if (ticks_pending > 8) {
         debug_blink(2);
     }
+#endif
 
     Pulse* head = &(pulse_fifo[pulse_head]);
     if (delay_in_state == 1) {
@@ -187,11 +189,6 @@ void loop()
             delay_in_state = 0; // discard this pulse and wait again
         }
     } else if (delay_in_state == 3) {   // got the trailing edge
-        // assert: head->state & ( READY_LEADING_EDGE | ACTIVE_PULSE)
-        // if ((head->state & ACTIVE_PULSE) == 0) {
-        //     debug_blink(5);
-        // }
-
         cli();
         head->stop = pulse_width;
         sei();

@@ -1,7 +1,7 @@
 #include "adc_to_delay.h"
 
 #define NLOBITS 7       // 10-bit ADC val, 3 upper and 7 lower
-#define MINTCKS 20      // lowest number of ticks (*0.213ms)
+#define MINTCKS 36      // lowest number of ticks (*0.213ms)
 
 // Helper: Map ADC value to delay (user can adjust this formula)
 uint16_t adc_to_delay(uint16_t adc_val) 
