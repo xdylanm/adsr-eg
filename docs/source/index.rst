@@ -13,4 +13,6 @@ Overview. Provide a description of the module here.
    :caption: Contents:
 
    theory
+   gate_delay_theory
+   ic_gate_delay
    assembly
