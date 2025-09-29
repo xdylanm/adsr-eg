@@ -1,6 +1,3 @@
-ADSR Envelope Generator
-=======================
-
 .. include:: ../../README.rst
 
 .. toctree::

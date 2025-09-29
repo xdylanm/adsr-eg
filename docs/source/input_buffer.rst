@@ -5,6 +5,7 @@ References
 ----------
 1. Rene Schmitz, "Third ADSR Schematic", [`schmitzbits.de <https://schmitzbits.de/adsr.html>`_]
 2. P. Horowitz and W. Hill, *The Art of Electronics*, 3rd ed., Cambridge University Press (2016)
+3. Kassutronics, "Precision ADSR", [`kassu2000.blogspot.com <https://kassu2000.blogspot.com/2015/05/precision-adsr.html>`_]
 
 Design
 ------
@@ -45,5 +46,5 @@ With R3=100, :math:`V_{th,R} = 1.2` V, :math:`V_{th,F} = 1.0` V, :math:`\Delta V
 Conclusions
 -----------
 
-The problem with this circuit is the low-level (OFF) voltage: the release path decays to this level, which creates a long tail on the envelope and holds the output of the envelope at that level. In Rene Schmitz's design, the low output is pulled down to the :math:`V_{CE,sat.}` of the output transistor in the buffer, which should be 50-80mV. This is similar to what you'd expect for a rail-to-rail comparator (e.g. `TLV360x <https://www.ti.com/lit/ds/symlink/tlv3601.pdf>`_`). 
+The problem with this circuit is the low-level (OFF) voltage: the release path decays to this level, which creates a long tail on the envelope and holds the output of the envelope at that level. In Rene Schmitz's design, the low output is pulled down to the :math:`V_{CE,sat.}` of the output transistor in the buffer, which should be 50-80mV. This is similar to what you'd expect for a rail-to-rail comparator (e.g. `TLV360x <https://www.ti.com/lit/ds/symlink/tlv3601.pdf>`_), but the level is still held up by the very small current though the small-signal diode. In the Kassutronics circuit, a classic Schmitt-trigger buffer is used (albeit with a :math:`10\Omega` resistor from the emitter to ground), so clearly this is OK in practice when the diode issue is addressed.
 
