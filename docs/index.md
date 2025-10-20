@@ -7,7 +7,7 @@ An envelope generator modeled on the 555-based ADSR originally proposed by Jonat
 
 !!! repository "Project Source"
 
-    The project files, including schematic and layout, are available on [github](https://github.com/xdylanm/adsr-eg)
+    The project files, including schematic and layout, are available on [github](https://github.com/xdylanm/adsr-eg).
 
 ## Features
 
@@ -18,11 +18,9 @@ An envelope generator modeled on the 555-based ADSR originally proposed by Jonat
 
 ## Documentation
 
-### [Design](theory.md)
-
-### [Assembly](assembly.md)
-
-### [Schematic](assets/schematic.pdf)
+* [Design](theory.md)
+* [Assembly](assembly.md)
+* [Schematic](assets/schematic.pdf)
 
 ## References
 

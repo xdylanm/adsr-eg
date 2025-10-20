@@ -1,6 +1,12 @@
 # Overview
 
+The module is designed around the 555-core ADSR. 
 
+![Block Diagram](assets/images/block_diagram_1.png){: width="640"}
+
+The input to the ADSR core is a logic-high pulse with length $T$. The rising edge of this pulse is converted to a short, inverted trigger to start the envelope. The pulse itself also holds the (active-low) reset high, which generates the window for the attack, decay & sustain phases. When the gate pulse is removed, the release phase is triggered. 
+
+When the external gate is selected, a Schmitt-trigger buffer converts the input signal into a pulse. Alternatively, the EG can be switched into a looping mode: a comparator detects the end of the envelope (release decays below ~100mV) and triggers a one-shot, which provides an adjustable-length gate pulse.
 
 ## Notes on Features
 
