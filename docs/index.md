@@ -3,7 +3,7 @@
 An envelope generator modeled on the 555-based ADSR originally proposed by Jonathan Jacky. It's worth looking through the evolution of this design - see references below. 
 
 * Module size: 6HP (30mm)
-* Power: xx mA (+12V); xx mA (-12V)
+* Power: 14mA (+12V); 9mA (-12V)
 
 !!! repository "Project Source"
 
