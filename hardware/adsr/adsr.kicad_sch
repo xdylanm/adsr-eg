@@ -6,7 +6,7 @@
 	(paper "USLetter")
 	(title_block
 		(title "ADSR EG")
-		(date "2025-11-16")
+		(date "2025-11-23")
 		(rev "2.0")
 		(company "idyllm")
 		(comment 1 "CC BY-SA 4.0")
@@ -5143,12 +5143,6 @@
 		(uuid "6f6350cb-ea71-450b-9fee-293a6b9d22c4")
 	)
 	(junction
-		(at 212.09 146.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "76e7c576-5f2f-4ad0-8d56-caa47b2cd089")
-	)
-	(junction
 		(at 157.48 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5177,6 +5171,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "88b11855-4feb-4e49-82f5-968a8a8a0b99")
+	)
+	(junction
+		(at 229.87 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8edbd638-3205-47df-ad06-0526955c2e64")
 	)
 	(junction
 		(at 134.62 96.52)
@@ -5411,15 +5411,6 @@
 	(no_connect
 		(at 35.56 105.41)
 		(uuid "42ce9433-e7e4-4bc6-9971-7bccbbb60768")
-	)
-	(bus_entry
-		(at 207.01 157.48)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ffe20c7-6ea9-4d2b-8753-dd5a65c21418")
 	)
 	(wire
 		(pts
@@ -5963,7 +5954,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 146.05) (xy 212.09 146.05)
+			(xy 198.12 146.05) (xy 229.87 146.05)
 		)
 		(stroke
 			(width 0)
@@ -6913,13 +6904,13 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 146.05) (xy 229.87 146.05)
+			(xy 212.09 133.35) (xy 229.87 133.35)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8eb3ea4a-a41a-4290-89c0-72b1eb9d4e7c")
+		(uuid "904f5f2f-e43c-4927-9f11-6cd34e3096b7")
 	)
 	(wire
 		(pts
@@ -7473,7 +7464,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 127) (xy 212.09 146.05)
+			(xy 212.09 127) (xy 212.09 133.35)
 		)
 		(stroke
 			(width 0)
@@ -7550,6 +7541,16 @@
 			(type default)
 		)
 		(uuid "c0ed89ba-2e67-41a9-99fa-640466dbc518")
+	)
+	(wire
+		(pts
+			(xy 229.87 133.35) (xy 229.87 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c17caad5-a20d-4a6b-a6b7-d2bdc8248384")
 	)
 	(wire
 		(pts
@@ -7803,7 +7804,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 146.05) (xy 229.87 124.46)
+			(xy 229.87 146.05) (xy 229.87 133.35)
 		)
 		(stroke
 			(width 0)
@@ -16071,7 +16072,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "10R"
 			(at 118.11 53.3399 0)
 			(effects
 				(font
@@ -16281,7 +16282,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4U7"
+		(property "Value" "4u7"
 			(at 50.8 159.3849 0)
 			(effects
 				(font
@@ -17947,7 +17948,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4U7"
+		(property "Value" "4u7"
 			(at 246.38 106.0449 0)
 			(effects
 				(font
