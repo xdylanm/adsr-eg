@@ -11,16 +11,11 @@
 ## Design
 
 The objective of the comparator in the feedback loop is to re-trigger
-the 555 one-shot when the output envelope drops below a threshold. The
-compartor will be constructed with an opamp in TL07x, which results in
-outputs ranging from approximately -11V to 11V. The 555 only accepts
-inputs from 0 to VCC, and the trigger input on the 555 is active-low: a
-BJT common-emitter inverter will handle the level translation.
+the 555 one-shot when the output envelope drops below a threshold. The comparator will be constructed with an opamp in TL07x, which results in outputs ranging from approximately -11V to 11V. The 555 only accepts inputs from 0 to VCC, and the trigger input on the 555 is active-low: a BJT common-emitter inverter will handle the level translation.
 
 With the BJT inverter, we need an inverting comparator to trigger
 (active-low) the 555 on the falling edge of the envelope. When the
-envelope rises again, the trigger is removed from the 555 (which holds
-its output based on the RC time constant).
+envelope rises again, the trigger is removed from the 555 (which holds its output based on the RC time constant).
 
 <div class="grid" markdown>
 
