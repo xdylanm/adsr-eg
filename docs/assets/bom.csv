@@ -22,7 +22,7 @@
 "R25","120k","0805","1"
 "R26,R27","4k7","0805","2"
 "R28,R29,R30","100","0805","3"
-"RV1","1M","Bourns PTV09A Vertical","1"
+"RV1","B1M","Bourns PTV09A Vertical","1"
 "RV2","B10k","Bourns PTV09A Vertical","1"
 "RV3,RV4,RV5","A1M","Bourns PTV09A Vertical","3"
 "SW1","Pushbutton","6mm mom-on","1"

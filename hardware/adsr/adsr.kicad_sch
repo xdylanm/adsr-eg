@@ -4968,6 +4968,46 @@
 		)
 		(uuid "d8bd971d-8449-4715-adbe-c8212cce5b45")
 	)
+	(text_box "Adjust C2 to 10u or 22u for lower frequency oscillation."
+		(exclude_from_sim no)
+		(at 19.05 153.67 0)
+		(size 24.13 7.62)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "395ac08f-eb07-4be7-9a4b-189d9a0e99eb")
+	)
+	(text_box "Note: there is no D3 (removed)"
+		(exclude_from_sim no)
+		(at 15.24 15.24 0)
+		(size 20.32 6.35)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "f4a60d4b-53d1-4f18-8f8d-f910401f08d4")
+	)
 	(junction
 		(at 30.48 186.69)
 		(diameter 0)
@@ -8989,28 +9029,28 @@
 			)
 		)
 		(pin "3"
-			(uuid "0498b545-a871-4049-98de-a3b014491264")
+			(uuid "0498b545-a871-4049-98de-a3b014491265")
 		)
 		(pin "6"
-			(uuid "b3c7aff6-8c66-450b-849e-b7ed5104acaf")
+			(uuid "b3c7aff6-8c66-450b-849e-b7ed5104acb0")
 		)
 		(pin "2"
-			(uuid "36ce0afe-0e91-42e5-a53d-1687bb11e902")
+			(uuid "36ce0afe-0e91-42e5-a53d-1687bb11e903")
 		)
 		(pin "7"
-			(uuid "0cd186da-a841-4eee-bcfb-96c2ade175e1")
+			(uuid "0cd186da-a841-4eee-bcfb-96c2ade175e2")
 		)
 		(pin "1"
-			(uuid "68ed7121-5310-412a-b9fe-27503df7da85")
+			(uuid "68ed7121-5310-412a-b9fe-27503df7da86")
 		)
 		(pin "8"
-			(uuid "3913c5ab-bc73-438d-a446-6aed851b15d1")
+			(uuid "3913c5ab-bc73-438d-a446-6aed851b15d2")
 		)
 		(pin "5"
-			(uuid "f718fb07-b4ba-4be2-b1be-151da2454666")
+			(uuid "f718fb07-b4ba-4be2-b1be-151da2454667")
 		)
 		(pin "4"
-			(uuid "ffda3c8f-f8a9-4249-8c2d-0382371cbbe4")
+			(uuid "ffda3c8f-f8a9-4249-8c2d-0382371cbbe5")
 		)
 		(instances
 			(project ""
