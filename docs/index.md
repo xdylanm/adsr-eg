@@ -1,5 +1,8 @@
 # ADSR Envelope Generator
 
+![ADSR](./assets/images/ADSR_dark.png#only-dark){: width="144", align="right"}
+![ADSR](./assets/images/ADSR_light.png#only-light){: width="144", align="right"}
+
 An envelope generator modeled on the 555-based ADSR originally proposed by Jonathan Jacky. It's worth looking through the evolution of this design - see references below. 
 
 * Module size: 6HP (30mm)

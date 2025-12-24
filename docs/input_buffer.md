@@ -51,7 +51,7 @@ R3 (Ω)                 |ΔV (mV)                |Rising threshold (V)
 
 A circuit simulation can be found on [falstad.com](https://tinyurl.com/26fdct39).
 
-In the Kassutronics [precision ADSR]([kassu2000.blogspot.com](https://kassu2000.blogspot.com/2015/05/precision-adsr.html)) design, this input buffer is used with a larger $R_4=22k\Omega$ and smaller $R_3 = 10\Omega$, which yields $\Delta V\approx 5\mathrm{mV}$. The larger emitter resistor reduces the current consumption in this buffer significantly. The diode at the base of the input BJT guards against the reverse-bias breakdown of the base-emitter diode. An extra shunt resistance to ground at the base avoids a floating base (not shown in the schematic above).
+In the Kassutronics [precision ADSR](https://kassu2000.blogspot.com/2015/05/precision-adsr.html) design, this input buffer is used with a larger $R_4=22k\Omega$ and smaller $R_3 = 10\Omega$, which yields $\Delta V\approx 5\mathrm{mV}$. The larger emitter resistor reduces the current consumption in this buffer significantly. The diode at the base of the input BJT guards against the reverse-bias breakdown of the base-emitter diode. An extra shunt resistance to ground at the base avoids a floating base (not shown in the schematic above).
 
 These Schmitt-trigger buffers are used to condition the gate input to the ADSR and to buffer the falling edge-generated pulse from the 555 output to reset the SR latch. 
 

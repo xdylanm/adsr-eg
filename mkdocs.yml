@@ -8,6 +8,7 @@ nav:
     - theory.md
     - Input Buffer: input_buffer.md
     - Loop Comparator: loop_comparator.md
+    - Trigger Circuit: trigger.md
   - Assembly: assembly.md
   - Schematic: assets/schematic.pdf
 
