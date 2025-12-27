@@ -644,7 +644,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "../../docs/assets/",
+    "plot_directory": "../plots/",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -659,6 +659,10 @@
     [
       "bc327a33-f4cb-4cb8-a280-c2a5130340fc",
       "Root"
+    ],
+    [
+      "840374bc-0ebd-4c5d-9885-5b3cf4116e81",
+      "trigger"
     ]
   ],
   "text_variables": {}
