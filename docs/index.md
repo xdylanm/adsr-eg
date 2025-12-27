@@ -1,9 +1,12 @@
 # ADSR Envelope Generator
 
+![ADSR](./assets/images/ADSR_dark.png#only-dark){: width="144", align="right"}
+![ADSR](./assets/images/ADSR_light.png#only-light){: width="144", align="right"}
+
 An envelope generator modeled on the 555-based ADSR originally proposed by Jonathan Jacky. It's worth looking through the evolution of this design - see references below. 
 
 * Module size: 6HP (30mm)
-* Power: 14mA (+12V); 9mA (-12V)
+* Power: 10mA (+12V); 9mA (-12V)
 
 !!! repository "Project Source"
 
@@ -12,9 +15,13 @@ An envelope generator modeled on the 555-based ADSR originally proposed by Jonat
 ## Features
 
 * ADSR controls
-* Gate or loop input
-    * Gate: Schmitt-trigger buffer for control signals; manual gate button
-    * Loop: independent rate control (equivalent to sustain)
+* Gate input: control signal, button or loop input
+    * Schmitt-trigger buffer for control signals and button
+    * Independent rate control for the loop (equivalent to sustain)
+* Trigger (rising edge) input: initiate an A/D or A/R cycle
+* Loop mode with adjustable sustain period (LFO behaviour if desired)
+
+When a gate signal is removed, the release phase of the cycle will start immediately (independent of the envelope level). When a trigger input is applied, the envelope will always go to its maximum level before transitioning to the decay (gate signal still applied) or release phase (gate signal absent). See the [Design](theory.md) section for more details.
 
 ## Documentation
 
