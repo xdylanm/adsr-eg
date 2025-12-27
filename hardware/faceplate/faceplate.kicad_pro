@@ -487,7 +487,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../plots/",
+      "plot": "../plots/adsr-faceplate/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
